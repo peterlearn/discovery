@@ -13,4 +13,4 @@ COPY --from=build /app/building/dist/conf/discovery.toml /app/conf/
 ENV  LOG_DIR    /app/log
 EXPOSE 7171
 WORKDIR /app/
-CMD  /app/bin/discovery -conf /app/conf/ -confkey /app/conf/discovery.toml
+CMD  /app/bin/discovery -conf /app/conf/discovery.toml
