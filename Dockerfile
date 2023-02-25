@@ -8,6 +8,7 @@ FROM alpine:3.9.5
 # Copy from docker build
 COPY --from=build /app/building/dist/bin/discovery /app/bin/
 COPY --from=build /app/building/dist/conf/discovery.toml /app/conf/
+COPY --from=build /app/building/dist/conf/discovery-example.toml /app/conf/
 # Copy from local build
 #ADD  dist/ /app/
 ENV  LOG_DIR    /app/log
